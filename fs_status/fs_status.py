@@ -29,8 +29,8 @@ def table_info_from_command(command, row_start, columns):
 usage_info = table_info_from_command(["df", "-h"], FILE_SYSTEM, [SIZE_COLUMN, USED_COLUMN, USED_PERCENT_COLUMN])
 inode_usage_info = table_info_from_command(["df", "-hi"], FILE_SYSTEM, [INODE_SIZE_COLUMN, INODE_USED_COLUMN, INODE_USED_PERCENT_COLUMN])
 
-output = '''<p>Storage Usage: %s/%s  %s</p>
-<p>Inode Usage: %s/%s  %s</p>
+output = '''<p>Storage Usage: %s/%s  <b>%s</b></p>
+<p>Inode Usage: %s/%s  <b>%s</b></p>
 ''' % (usage_info[1], usage_info[0], usage_info[2], inode_usage_info[1], inode_usage_info[0], inode_usage_info[2])
 print output 
 
